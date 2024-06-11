@@ -20,7 +20,7 @@ export default function Page({ params }: Params) {
         <section className="w-full pt-6 md:pt-12 lg:pt-24">
           <div className="container mx-auto px-10">
             <div className="space-y-2 my-8">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-5xl">
+              <h2 className="text-2xl font-bold sm:text-5xl">
                 {portfolio.title}
               </h2>
             </div>
@@ -42,7 +42,7 @@ export default function Page({ params }: Params) {
 
               <div className="md:basis-1/2">
                 <div className="grid gap-1 mb-8">
-                  <h3 className="text-xl font-bold tracking-tighter">担当</h3>
+                  <h3 className="text-xl font-bold">担当</h3>
                   <div>
                     <p className="text-gray-500 dark:text-gray-400">{portfolio.charge}</p>
                   </div>
@@ -51,7 +51,7 @@ export default function Page({ params }: Params) {
                 {
                   portfolio.concept && (
                     <div className="grid gap-1 mb-8">
-                      <h3 className="text-xl font-bold tracking-tighter">コンセプト</h3>
+                      <h3 className="text-xl font-bold">コンセプト</h3>
                       <div>
                         {
                           portfolio.concept.split("\n").map((line, index) => (
@@ -64,7 +64,7 @@ export default function Page({ params }: Params) {
                 }
 
                 <div className="grid gap-1 mb-8">
-                  <h3 className="text-xl font-bold tracking-tighter">工夫した点</h3>
+                  <h3 className="text-xl font-bold">工夫した点</h3>
                   <div>
                     <p className="text-gray-500 dark:text-gray-400">{portfolio.ingenuity}</p>
                   </div>
