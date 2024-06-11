@@ -1,10 +1,10 @@
-export default function Skills() {
+export default function Hobby() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-10 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2 my-8">
-            <h2 className="text-3xl font-bold sm:text-5xl">Skills</h2>
+            <h2 className="text-3xl font-bold sm:text-5xl">Hobby</h2>
           </div>
         </div>
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">

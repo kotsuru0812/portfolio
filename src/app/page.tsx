@@ -1,7 +1,7 @@
 import Name from "@/components/Home/Name";
 import Portfolio from "@/components/Home/Portfolio";
 import WorkExperience from "@/components/Home/WorkExperience";
-import Skills from "@/components/Home/Skills";
+import Hobby from "@/components/Home/Hobby";
 
 import Header from "@/components/Header";
 
@@ -13,7 +13,7 @@ export default function Page() {
         <Name />
         <Portfolio />
         <WorkExperience />
-        <Skills />
+        <Hobby />
       </main>
     </>
   )

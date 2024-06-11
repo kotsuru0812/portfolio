@@ -29,7 +29,7 @@ export default function Page({ params }: Params) {
               <div className="md:basis-1/2 mb-8">
                 <Image
                   alt={portfolio.title}
-                  className="rounded-lg object-cover"
+                  className="object-cover"
                   src={portfolio.image}
                   style={{
                     aspectRatio: (portfolio.imageSize.width / portfolio.imageSize.height),
@@ -42,20 +42,20 @@ export default function Page({ params }: Params) {
 
               <div className="md:basis-1/2">
                 <div className="grid gap-1 mb-8">
-                  <h3 className="text-xl font-bold">担当</h3>
+                  <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">担当</h3>
                   <div>
-                    <p className="text-gray-500 dark:text-gray-400">{portfolio.charge}</p>
+                    <p className="text-slate-950 dark:text-gray-400 px-2 py-2">{portfolio.charge}</p>
                   </div>
                 </div>
 
                 {
                   portfolio.concept && (
                     <div className="grid gap-1 mb-8">
-                      <h3 className="text-xl font-bold">コンセプト</h3>
+                      <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">コンセプト</h3>
                       <div>
                         {
                           portfolio.concept.split("\n").map((line, index) => (
-                            <p key={index} className="text-gray-500 dark:text-gray-400 mb-2">{line}</p>
+                            <p key={index} className="text-slate-950d dark:text-gray-400 mb-2 px-2 py-2">{line}</p>
                           ))
                         }
                     </div>
@@ -64,9 +64,9 @@ export default function Page({ params }: Params) {
                 }
 
                 <div className="grid gap-1 mb-8">
-                  <h3 className="text-xl font-bold">工夫した点</h3>
+                  <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">工夫した点</h3>
                   <div>
-                    <p className="text-gray-500 dark:text-gray-400">{portfolio.ingenuity}</p>
+                    <p className="text-slate-950 dark:text-gray-400 px-2 py-2">{portfolio.ingenuity}</p>
                   </div>
                 </div>
               </div>

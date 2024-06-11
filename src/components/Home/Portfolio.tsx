@@ -20,11 +20,11 @@ export default function Portfolio() {
                 <h3 className="text-lg mb-2 font-bold">{portfolio.title}</h3>
                 <Image
                   alt={portfolio.title}
-                  className="rounded-lg object-cover"
-                  height="300"
+                  className="object-cover"
+                  height="400"
                   src={portfolio.image}
                   style={{
-                    aspectRatio: "400/300",
+                    aspectRatio: "400/400",
                     objectFit: "cover",
                   }}
                   width="400"

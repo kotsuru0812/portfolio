@@ -8,32 +8,22 @@ export default function WorkExperience() {
           </div>
         </div>
 
-        <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+        <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-3xl lg:grid-cols-2">
           <div className="grid gap-1">
-            <h3 className="text-lg font-bold">Accountant</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">ABC Accounting Firm | 2018 - 2022</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Responsible for preparing financial statements, managing accounts payable and receivable, and
-              providing financial analysis to clients.
-            </p>
+            <h3 className="text-lg font-bold">Web director</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400">レシピストア/プロのレシピ | 2012-2014</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">ユーザーファースト推進室 | 2015-2016</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">技術部/UXデザイングループ | 2016-2017</p>
           </div>
 
           <div className="grid gap-1">
             <h3 className="text-lg font-bold">Freelance Designer</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">2022 - Present</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Worked with various clients to create user-friendly and visually appealing designs for websites,
-              mobile apps, and marketing materials.
-            </p>
-          </div>
-
-          <div className="grid gap-1">
-            <h3 className="text-lg font-bold">Design Intern</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">XYZ Design Agency | Summer 2021</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Assisted the design team in creating wireframes, prototypes, and final designs for various client
-              projects.
-            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">cookpad studio | 2017-2018</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">cookpadTV App | 2017-2018</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">storeTV | 2018-2020</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">cookpadLive App | 2020-2023</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Agu.スタイリスト App | 2023</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">東京大学薬学部 CIRCLe LIFF App | 2023-2024</p>
           </div>
         </div>
       </div>
