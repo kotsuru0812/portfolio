@@ -10,8 +10,9 @@ export default function Name() {
               Yoko Daikoku
             </h1>
             <p className="text-gray-500 mt-4 md:text-xl dark:text-gray-400">UI/UX Designer</p>
+            <p className="text-gray-500 mt-4 text-sm lg:text-lg dark:text-gray-400">強みはInformation ArchitectとUI Designです。<br />使い手に寄り添ったデザインを心がけています。</p>
           </div>
-          <div className="flex flex-col items-start space-y-4">
+          <div className="flex flex-col items-start mt-8 space-y-4">
             <Image
               alt="Yoko Daikoku"
               className="rounded-full w-[200px] h-[200px] object-cover place-self-center"
