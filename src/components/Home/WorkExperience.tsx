@@ -10,7 +10,7 @@ export default function WorkExperience() {
 
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-3xl lg:grid-cols-2">
           <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Web director</h3>
+            <h3 className="text-xl font-bold">Web Director</h3>
             <p className="ttext-base lg:text-lg text-gray-500 dark:text-gray-400">レシピストア/プロのレシピ | 2012-2014</p>
             <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400">ユーザーファースト推進室 | 2015-2016</p>
             <p className="text-base lg:text-lg text-gray-500 dark:text-gray-400">技術部/UXデザイングループ | 2016-2017</p>

@@ -3,8 +3,9 @@ export type porofilioIds = "agu" | "cookpad-pro-recipe" | "cookpad-storetv" | "c
 export type Portfolio = {
   id: porofilioIds,
   title: string;
+  award?: string;
   charge: string;
-  concept: string | undefined;
+  concept?: string;
   ingenuity: string;
   image: string;
   imageSize: { width: number, height: number };
@@ -15,7 +16,6 @@ export const portfolios: Record<porofilioIds, Portfolio> = {
     id: "circle-life",
     title: "CIRCLe LIFFアプリ",
     charge: "LINE上で動く、ウェブアプリのUIデザインを担当しました。",
-    concept: undefined,
     ingenuity: "子供の特定疾患ということで、両親が操作すること、遺伝性の疾患であるため、兄弟姉妹がいる場合は複数の患者の情報を登録できる必要がありました。そのため、患者ごとにテーマカラーを登録できるようにし、アプリ自体は白ベースのシンプルなものにしました。",
     image: "/portfolio/circle-life.png",
     imageSize: { width: 666, height: 692 },
@@ -24,7 +24,6 @@ export const portfolios: Record<porofilioIds, Portfolio> = {
     id: "agu",
     title: "Agu. スタイリストアプリ",
     charge: "既存アプリのリニューアルにともない、Android/iOS アプリのUX/UIデザインを担当しています。",
-    concept: undefined,
     ingenuity: "ブランドカラーのダークグレーを軸にし、ファーストビューに全ての機能の導線を配置しました。報酬のグラフを配置することで、一目で今の売上状況が確認できるようにしています。",
     image: "/portfolio/agu.png",
     imageSize: { width: 666, height: 630 },
@@ -32,6 +31,7 @@ export const portfolios: Record<porofilioIds, Portfolio> = {
   "cookpad-tv": {
     id: "cookpad-tv",
     title: "cookpadTV アプリ",
+    award: "Google Play Best of 2018 生活お役立ち部門 大賞受賞",
     charge: "Android/iOS アプリのUX/UIデザインを担当しています。",
     concept: "「一緒に料理が作れるライブ」\nプロの料理家などがライブ配信することで、離れた場所でも一緒に料理を作り、料理を学ぶことができるアプリをコンセプトにしています。",
     ingenuity: "クッキングLIVEらしく料理が映えるデザインを意識しました。Android、iOSそれぞれのデザインガイドラインに沿ったデザインにしています。",
@@ -42,7 +42,6 @@ export const portfolios: Record<porofilioIds, Portfolio> = {
     id: "cookpad-storetv",
     title: "storeTV-流通向けサイネージ",
     charge: "流通向けサイネージ端末のUX/UIデザイン、端末選定、開発ディレクションを担当しました。展示会などのクリエイティブや大型サイネージの枠デザインも担当しました。",
-    concept: undefined,
     ingenuity: "流通の売場スタッフが簡単に操作できるように、自動化できる機能はすべて自動化しました。既存プロダクトを引き継いだので、課題から改善点を提案し、スムーズに運用ができるようにし、MDMを自前で開発することで、大幅なコスト削減を実現しました。",
     image: "/portfolio/cookpad-storetv.png",
     imageSize: { width: 700, height: 621 },

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { FiAward } from "react-icons/fi";
 import Header from "@/components/Header"
 
 import { portfolios, porofilioIds } from "@/components/Portfolio"
@@ -42,6 +43,14 @@ export default function Page({ params }: Params) {
 
               <div className="md:basis-1/2">
                 <div className="grid gap-1 mb-8">
+                  {
+                    portfolio.award && (
+                      <p className="inline-flex items-baseline text-slate-950 dark:text-gray-400 px-2 py-2">
+                        <span className="pr-1"><FiAward /></span>
+                        {portfolio.award}
+                      </p>
+                    )
+                  }
                   <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">担当</h3>
                   <div>
                     <p className="text-slate-950 dark:text-gray-400 px-2 py-2">{portfolio.charge}</p>
