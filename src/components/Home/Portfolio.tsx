@@ -17,7 +17,7 @@ export default function Portfolio() {
             return(
               <div key={portfolio.id} className="grid gap-1">
                 <Link href={`/portfolio/${portfolio.id}`}>
-                <h3 className="text-lg mb-2 font-bold">{portfolio.title}</h3>
+                <h3 className="text-lg mb-2">{portfolio.title}</h3>
                 <Image
                   alt={portfolio.title}
                   className="object-cover"
