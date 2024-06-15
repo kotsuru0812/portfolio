@@ -13,7 +13,7 @@ export default function Portfolio() {
         </div>
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
         {
-          Object.values(portfolios).map((portfolio) => {
+          Object.values(portfolios).map((portfolio, index) => {
             return(
               <div key={portfolio.id} className="grid gap-1">
                 <Link href={`/portfolio/${portfolio.id}`}>
@@ -23,6 +23,7 @@ export default function Portfolio() {
                   className="object-cover"
                   height="400"
                   src={portfolio.image}
+                  priority={index < 3}
                   style={{
                     aspectRatio: "400/400",
                     objectFit: "cover",
