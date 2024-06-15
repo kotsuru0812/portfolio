@@ -20,6 +20,8 @@ export default function Hobby() {
     setIsViewerOpen(false);
   };
 
+  const imageSources = images.map(image => image.src) as string[];
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-24">
       <div className="container mx-auto px-10 md:px-6">
@@ -49,7 +51,7 @@ export default function Hobby() {
 
           {isViewerOpen && (
             <ImageViewer
-              src={images.map(image => image.src)}
+              src={imageSources}
               currentIndex={currentImage}
               disableScroll={false}
               closeOnClickOutside={true}
