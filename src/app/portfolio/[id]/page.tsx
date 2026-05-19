@@ -1,17 +1,26 @@
-import Image from "next/image"
+import Image from "next/image";
+import { notFound } from "next/navigation";
 import { FiAward } from "react-icons/fi";
-import Header from "@/components/Header"
-
-import { portfolios, porofilioIds } from "@/components/Portfolio"
+import Header from "@/components/Header";
+import ProjectTypeBadges from "@/components/ProjectTypeBadges";
+import { portfolioItems, portfoliosById } from "@/components/Portfolio";
 
 type Params = {
   params: {
-    id: porofilioIds,
-  }
+    id: string;
+  };
 };
 
+export function generateStaticParams() {
+  return portfolioItems.map((item) => ({ id: item.id }));
+}
+
 export default function Page({ params }: Params) {
-  const portfolio = portfolios[params.id];
+  const portfolio = portfoliosById[params.id];
+
+  if (!portfolio) {
+    notFound();
+  }
 
   return (
     <>
@@ -24,6 +33,7 @@ export default function Page({ params }: Params) {
               <h2 className="text-2xl font-bold sm:text-5xl">
                 {portfolio.title}
               </h2>
+              <ProjectTypeBadges types={portfolio.projectTypes} />
             </div>
 
             <div className="md:flex lg:space-x-8 sm:max-w-4xl lg:max-w-5xl place-self-center">
@@ -33,7 +43,8 @@ export default function Page({ params }: Params) {
                   className="object-cover"
                   src={portfolio.image}
                   style={{
-                    aspectRatio: (portfolio.imageSize.width / portfolio.imageSize.height),
+                    aspectRatio:
+                      portfolio.imageSize.width / portfolio.imageSize.height,
                     objectFit: "cover",
                   }}
                   width={portfolio.imageSize.width}
@@ -43,48 +54,57 @@ export default function Page({ params }: Params) {
 
               <div className="md:basis-1/2">
                 <div className="grid gap-1 mb-8">
-                  {
-                    portfolio.award && (
-                      <p className="inline-flex items-baseline text-slate-950 dark:text-gray-400 px-2 py-2">
-                        <span className="pr-1"><FiAward /></span>
-                        {portfolio.award}
-                      </p>
-                    )
-                  }
-                  <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">担当</h3>
+                  {portfolio.award && (
+                    <p className="inline-flex items-baseline text-slate-950 dark:text-gray-400 px-2 py-2">
+                      <span className="pr-1">
+                        <FiAward />
+                      </span>
+                      {portfolio.award}
+                    </p>
+                  )}
+                  <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">
+                    担当
+                  </h3>
                   <div>
-                    <p className="text-slate-950 dark:text-gray-400 px-2 py-2">{portfolio.charge}</p>
+                    <p className="text-slate-950 dark:text-gray-400 px-2 py-2">
+                      {portfolio.charge}
+                    </p>
                   </div>
                 </div>
 
-                {
-                  portfolio.concept && (
-                    <div className="grid gap-1 mb-8">
-                      <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">コンセプト</h3>
-                      <div>
-                        {
-                          portfolio.concept.split("\n").map((line, index) => (
-                            <p key={index} className="text-slate-950d dark:text-gray-400 mb-2 px-2 py-2">{line}</p>
-                          ))
-                        }
+                {portfolio.concept && (
+                  <div className="grid gap-1 mb-8">
+                    <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">
+                      コンセプト
+                    </h3>
+                    <div>
+                      {portfolio.concept.split("\n").map((line, index) => (
+                        <p
+                          key={index}
+                          className="text-slate-950 dark:text-gray-400 mb-2 px-2 py-2"
+                        >
+                          {line}
+                        </p>
+                      ))}
                     </div>
-                    </div>
-                  )
-                }
+                  </div>
+                )}
 
                 <div className="grid gap-1 mb-8">
-                  <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">工夫した点</h3>
+                  <h3 className="text-xl font-bold bg-gray-200 dark:bg-slate-600 px-2 py-1">
+                    工夫した点
+                  </h3>
                   <div>
-                    <p className="text-slate-950 dark:text-gray-400 px-2 py-2">{portfolio.ingenuity}</p>
+                    <p className="text-slate-950 dark:text-gray-400 px-2 py-2">
+                      {portfolio.ingenuity}
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </section>
       </main>
-
     </>
   );
 }

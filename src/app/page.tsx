@@ -1,6 +1,5 @@
-import Name from "@/components/Home/Name";
+import ProfileSection from "@/components/Home/ProfileSection";
 import Portfolio from "@/components/Home/Portfolio";
-import WorkExperience from "@/components/Home/WorkExperience";
 import Hobby from "@/components/Home/Hobby";
 
 import Header from "@/components/Header";
@@ -10,12 +9,10 @@ export default function Page() {
     <>
       <Header />
       <main className="flex-1 place-items-center">
-        <Name />
+        <ProfileSection />
         <Portfolio />
-        <WorkExperience />
         <Hobby />
       </main>
     </>
-  )
-}
-
+  );
+};
