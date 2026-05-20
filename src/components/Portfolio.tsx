@@ -31,6 +31,47 @@ export type Portfolio = {
 
 export const portfolioItems: Portfolio[] = [
   {
+    id: "crm-dashboard",
+    title: "CRM - ダッシュボード",
+    year: 2024,
+    company: "POS+",
+    projectTypes: ["improvement"],
+    sortOrder: 1,
+    charge:
+      "新規機能追加に伴い、UI/UXデザインを担当しました。同時にアンケート回答画面（モバイル）のUI改善も行いました。",
+    ingenuity:
+      "当初、クライアントの課題や分析の目的が曖昧だったため、初稿で3案を提出し、クライアントへのヒアリングを提案させていただきました。その結果、NPSの指標が重要と判明し、項目と適切なグラフを追加することができました。",
+    image: "/portfolio/CRM-dashboard.png",
+    imageSize: { width: 800, height: 600 },
+  },
+  {
+    id: "mobile-order",
+    title: "モバイルオーダー",
+    year: 2024,
+    company: "POS+",
+    projectTypes: ["improvement"],
+    sortOrder: 2,
+    charge:
+      "新規機能追加や機能改善に伴い、UI/UXデザインを担当しました。展示用のプロトタイプの制作も担当しました。",
+    ingenuity:
+      "実際の動きに近いプロトタイプを作ることで、エンジニアとの連携をスムーズに行うことができました。また、実機の使用感をプロトタイプで再現することで、展示や営業用として、幅広く活用していただけると好評を得ております。",
+    image: "/portfolio/mobileorder-01.png",
+    imageSize: { width: 800, height: 600 },
+  },
+  {
+    id: "onboarding",
+    title: "オンボーディング効率化",
+    year: 2025,
+    company: "POS+",
+    projectTypes: ["renewal"],
+    sortOrder: 3,
+    charge: "UI/UXデザインを担当しました。",
+    ingenuity:
+      "ユーザーにとって、登録フローの複雑さが離脱の原因となっていたため、フローを簡素化し、各ステップの要件を再整理しました。必要最低限の内容に絞ることで、直感的に入力することができ、CSチームや営業チームからも好評を得ております。",
+    image: "/portfolio/onbording-01.png",
+    imageSize: { width: 800, height: 600 },
+  },
+  {
     id: "circle-life",
     title: "CIRCLe LIFFアプリ",
     year: 2024,

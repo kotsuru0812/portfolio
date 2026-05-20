@@ -28,4 +28,12 @@ export const workExperienceByCompany: {
       "2023-2024 | 東京大学薬学部 CIRCLe LIFF App",
     ],
   },
+  {
+    company: "POS+",
+    items: [
+      "2024-2025 | CRM - ダッシュボード",
+      "2024-2025 | モバイルオーダー",
+      "2025-2026 | オンボーディング効率化",
+    ],
+  },
 ];
