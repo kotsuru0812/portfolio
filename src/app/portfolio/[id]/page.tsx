@@ -29,11 +29,14 @@ export default function Page({ params }: Params) {
       <main className="flex-1 place-items-center">
         <section className="w-full pt-6 md:pt-12 lg:pt-24">
           <div className="container mx-auto px-10">
-            <div className="space-y-2 my-8">
+            <div className="space-y-2 my-8 text-center">
               <h2 className="text-2xl font-bold sm:text-5xl">
                 {portfolio.title}
               </h2>
-              <ProjectTypeBadges types={portfolio.projectTypes} />
+              <ProjectTypeBadges
+                types={portfolio.projectTypes}
+                className="justify-center"
+              />
             </div>
 
             <div className="md:flex lg:space-x-8 sm:max-w-4xl lg:max-w-5xl place-self-center">

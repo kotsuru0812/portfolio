@@ -102,7 +102,7 @@ export const portfolioItems: Portfolio[] = [
   {
     id: "cookpad-kitchen-star",
     title: "cookpad キッチンスター",
-    year: 2019,
+    year: 2016,
     company: "Cookpad",
     projectTypes: ["new"],
     sortOrder: 1,
@@ -179,7 +179,7 @@ export const portfolioItems: Portfolio[] = [
   {
     id: "cookpad-pro-recipe",
     title: "cookpad プロのレシピ",
-    year: 2016,
+    year: 2019,
     company: "Cookpad",
     projectTypes: ["new"],
     sortOrder: 1,

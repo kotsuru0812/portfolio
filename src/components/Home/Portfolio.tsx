@@ -29,17 +29,16 @@ function PortfolioCard({
     <div className="grid gap-1">
       <Link href={`/portfolio/${portfolio.id}`}>
         <h3 className="text-lg mb-1">{portfolio.title}</h3>
-        <ProjectTypeBadges types={portfolio.projectTypes} />
+        <ProjectTypeBadges
+          types={portfolio.projectTypes}
+          className="mb-4"
+        />
         <Image
           alt={portfolio.title}
-          className="object-cover"
-          height={400}
+          className="w-full aspect-[4/3] object-cover"
+          height={300}
           src={portfolio.image}
           priority={priority}
-          style={{
-            aspectRatio: "400/400",
-            objectFit: "cover",
-          }}
           width={400}
         />
       </Link>
@@ -96,14 +95,8 @@ export default function Portfolio() {
   );
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-24">
+    <section className="w-full pt-6 pb-12 md:pt-8 md:pb-24 lg:pb-24">
       <div className="container mx-auto px-10 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2 my-8">
-            <h2 className="text-3xl font-bold sm:text-5xl">Portfolio</h2>
-          </div>
-        </div>
-
         <div
           className="flex flex-wrap justify-center gap-2 mb-10"
           role="radiogroup"

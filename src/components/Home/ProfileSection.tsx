@@ -3,7 +3,7 @@ import { workExperienceByCompany } from "@/components/Home/workExperience";
 
 export default function ProfileSection() {
   return (
-    <section className="w-full pt-12 pb-12 md:pt-20 md:pb-14">
+    <section className="w-full pt-4 pb-12 md:pt-6 md:pb-14">
       <div className="container mx-auto px-10 lg:px-20 max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-center text-center gap-6 pb-8 md:pb-10 border-b border-gray-200 dark:border-slate-800">
           <div className="flex items-center justify-center gap-4 shrink-0">
