@@ -1,10 +1,10 @@
 import { ImageProps } from "next/image";
 
 export const images: ImageProps[] = [
-  { src: "/hobby/dsc02145.jpg", alt: "生ハムとカマンベール", width: 2049, height: 1606 },
-  { src: "/hobby/dsc01965.jpg", alt: "おはぎ", width: 2049, height: 1606 },
-  { src: "/hobby/dsc01904.jpg", alt: "あんバターサンド", width: 2049, height: 1606 },
-  { src: "/hobby/dsc01871.jpg", alt: "吉はし深山桜", width: 2049, height: 1606 },
-  { src: "/hobby/dsc02004.jpg", alt: "キャラメルシュークリーム", width: 2451, height: 1579 },
-  { src: "/hobby/dsc01617.jpg", alt: "大納言", width: 2099, height: 1362 },
+  { src: "/hobby/dsc02499.png", alt: "もらい水", width: 1024, height: 682 },
+  { src: "/hobby/dsc01871.png", alt: "吉はし深山桜", width: 1024, height: 682 },
+  { src: "/hobby/dsc05331.png", alt: "フレッシュライチのケーキ", width: 1024, height: 682 },
+  { src: "/hobby/dsc05970.png", alt: "フランボワーズのガトー", width: 1024, height: 682 },
+  { src: "/hobby/dsc06302.png", alt: "キャラメルシュークリーム", width: 1024, height: 682 },
+  { src: "/hobby/dsc07151.png", alt: "キャラメルチョコバー", width: 1024, height: 682 },
 ];
