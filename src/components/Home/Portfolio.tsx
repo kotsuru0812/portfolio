@@ -37,7 +37,7 @@ function PortfolioCard({
           alt={portfolio.title}
           className="w-full aspect-[4/3] object-cover"
           height={300}
-          src={portfolio.image}
+          src={portfolio.images[0].src}
           priority={priority}
           width={400}
         />

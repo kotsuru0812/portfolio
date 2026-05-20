@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FiAward } from "react-icons/fi";
 import Header from "@/components/Header";
+import PortfolioGallery from "@/components/PortfolioGallery";
 import ProjectTypeBadges from "@/components/ProjectTypeBadges";
 import { portfolioItems, portfoliosById } from "@/components/Portfolio";
 
@@ -41,17 +41,9 @@ export default function Page({ params }: Params) {
 
             <div className="md:flex lg:space-x-8 sm:max-w-4xl lg:max-w-5xl place-self-center">
               <div className="md:basis-1/2 mb-8">
-                <Image
-                  alt={portfolio.title}
-                  className="object-cover"
-                  src={portfolio.image}
-                  style={{
-                    aspectRatio:
-                      portfolio.imageSize.width / portfolio.imageSize.height,
-                    objectFit: "cover",
-                  }}
-                  width={portfolio.imageSize.width}
-                  height={portfolio.imageSize.height}
+                <PortfolioGallery
+                  images={portfolio.images}
+                  title={portfolio.title}
                 />
               </div>
 

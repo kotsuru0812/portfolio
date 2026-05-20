@@ -14,6 +14,12 @@ export const PROJECT_TYPE_ORDER: ProjectType[] = [
   "renewal",
 ];
 
+export type PortfolioImage = {
+  src: string;
+  width: number;
+  height: number;
+};
+
 export type Portfolio = {
   id: string;
   title: string;
@@ -25,9 +31,10 @@ export type Portfolio = {
   charge: string;
   concept?: string;
   ingenuity: string;
-  image: string;
-  imageSize: { width: number; height: number };
+  images: PortfolioImage[];
 };
+
+const size1024x768 = { width: 1024, height: 768 } as const;
 
 export const portfolioItems: Portfolio[] = [
   {
@@ -41,8 +48,7 @@ export const portfolioItems: Portfolio[] = [
       "新規機能追加に伴い、UI/UXデザインを担当しました。同時にアンケート回答画面（モバイル）のUI改善も行いました。",
     ingenuity:
       "当初、クライアントの課題や分析の目的が曖昧だったため、初稿で3案を提出し、クライアントへのヒアリングを提案させていただきました。その結果、NPSの指標が重要と判明し、項目と適切なグラフを追加することができました。",
-    image: "/portfolio/CRM-dashboard.png",
-    imageSize: { width: 800, height: 600 },
+    images: [{ src: "/portfolio/CRM-dashboard.png", ...size1024x768 }],
   },
   {
     id: "mobile-order",
@@ -55,8 +61,11 @@ export const portfolioItems: Portfolio[] = [
       "新規機能追加や機能改善に伴い、UI/UXデザインを担当しました。展示用のプロトタイプの制作も担当しました。",
     ingenuity:
       "実際の動きに近いプロトタイプを作ることで、エンジニアとの連携をスムーズに行うことができました。また、実機の使用感をプロトタイプで再現することで、展示や営業用として、幅広く活用していただけると好評を得ております。",
-    image: "/portfolio/mobileorder-01.png",
-    imageSize: { width: 800, height: 600 },
+    images: [
+      { src: "/portfolio/mobileorder-01.png", ...size1024x768 },
+      { src: "/portfolio/mobileorder-02.png", ...size1024x768 },
+      { src: "/portfolio/mobileorder-03.png", ...size1024x768 },
+    ],
   },
   {
     id: "onboarding",
@@ -68,8 +77,10 @@ export const portfolioItems: Portfolio[] = [
     charge: "UI/UXデザインを担当しました。",
     ingenuity:
       "ユーザーにとって、登録フローの複雑さが離脱の原因となっていたため、フローを簡素化し、各ステップの要件を再整理しました。必要最低限の内容に絞ることで、直感的に入力することができ、CSチームや営業チームからも好評を得ております。",
-    image: "/portfolio/onbording-01.png",
-    imageSize: { width: 800, height: 600 },
+    images: [
+      { src: "/portfolio/onbording-01.png", ...size1024x768 },
+      { src: "/portfolio/onbording-02.png", ...size1024x768 },
+    ],
   },
   {
     id: "circle-life",
@@ -82,8 +93,7 @@ export const portfolioItems: Portfolio[] = [
       "LINE上で動く、ウェブアプリのUIデザインを担当しました。",
     ingenuity:
       "子供の特定疾患ということで、両親が操作すること、遺伝性の疾患であるため、兄弟姉妹がいる場合は複数の患者の情報を登録できる必要がありました。そのため、患者ごとにテーマカラーを登録できるようにし、アプリ自体は白ベースのシンプルなものにしました。",
-    image: "/portfolio/circle-life-01.png",
-    imageSize: { width: 1024, height: 768 },
+    images: [{ src: "/portfolio/circle-life-01.png", ...size1024x768 }],
   },
   {
     id: "agu",
@@ -96,8 +106,7 @@ export const portfolioItems: Portfolio[] = [
       "既存アプリのリニューアルにともない、Android/iOS アプリのUX/UIデザインを担当しています。",
     ingenuity:
       "ブランドカラーのダークグレーを軸にし、ファーストビューに全ての機能の導線を配置しました。報酬のグラフを配置することで、一目で今の売上状況が確認できるようにしています。",
-    image: "/portfolio/agu-01.png",
-    imageSize: { width: 1024, height: 768 },
+    images: [{ src: "/portfolio/agu-01.png", ...size1024x768 }],
   },
   {
     id: "cookpad-kitchen-star",
@@ -111,8 +120,7 @@ export const portfolioItems: Portfolio[] = [
       "「SNSで ”魅せる”料理を仕事にする」\nSNSを通じて料理を魅力的に表現することで、新たな仕事のチャンスを掴める人を増やしたい。",
     ingenuity:
       "写真や人物に目がいきやすいように、白ベースで色を少なくしました。キーカラーも落ち着いた色を選定しております。",
-    image: "/portfolio/cookpad-kitchen-star-01.png",
-    imageSize: { width: 1024, height: 768 },
+    images: [{ src: "/portfolio/cookpad-kitchen-star-01.png", ...size1024x768 }],
   },
   {
     id: "cookpad-studio",
@@ -127,8 +135,7 @@ export const portfolioItems: Portfolio[] = [
       "「誰でも簡単に料理動画が撮影できるアプリ」\n一般のユーザーが気軽に料理動画を撮影できる場所と機材を提供し、プロ並みの料理動画が作れてしまうアプリにすることがコンセプトとなっています。",
     ingenuity:
       "見た目は徹底的にシンプルにし、動画編集などの機能は必要最低限に絞ることにより、迷いのない操作性とプロ並みの動画編集を実現することができました。",
-    image: "/portfolio/cookpad-studio-01.png",
-    imageSize: { width: 1024, height: 768 },
+    images: [{ src: "/portfolio/cookpad-studio-01.png", ...size1024x768 }],
   },
   {
     id: "cookpad-tv",
@@ -143,8 +150,7 @@ export const portfolioItems: Portfolio[] = [
       "「一緒に料理が作れるライブ」\nプロの料理家などがライブ配信することで、離れた場所でも一緒に料理を作り、料理を学ぶことができるアプリをコンセプトにしています。",
     ingenuity:
       "クッキングLIVEらしく料理が映えるデザインを意識しました。Android、iOSそれぞれのデザインガイドラインに沿ったデザインにしています。",
-    image: "/portfolio/cookpad-tv-01.png",
-    imageSize: { width: 1024, height: 768 },
+    images: [{ src: "/portfolio/cookpad-tv-01.png", ...size1024x768 }],
   },
   {
     id: "cookpad-storetv",
@@ -157,8 +163,7 @@ export const portfolioItems: Portfolio[] = [
       "流通向けサイネージ端末のUX/UIデザイン、端末選定、開発ディレクションを担当しました。展示会などのクリエイティブや大型サイネージの枠デザインも担当しました。",
     ingenuity:
       "流通の売場スタッフが簡単に操作できるように、自動化できる機能はすべて自動化しました。既存プロダクトを引き継いだので、課題から改善点を提案し、スムーズに運用ができるようにし、MDMを自前で開発することで、大幅なコスト削減を実現しました。",
-    image: "/portfolio/cookpad-storetv-01.png",
-    imageSize: { width: 1024, height: 768 },
+    images: [{ src: "/portfolio/cookpad-storetv-01.png", ...size1024x768 }],
   },
   {
     id: "cookpad-id",
@@ -173,8 +178,7 @@ export const portfolioItems: Portfolio[] = [
       "「シンプルでスマートなユーザー基盤」\nSMS認証を導入することにより、ユーザーの生活環境にそったユーザー基盤を構築し、ブラウザを閉じることなくユーザー登録が完了するスマートな設計にしました。",
     ingenuity:
       "ユーザー登録に関するUIは複雑で分かりにくいものになっていたため、必要最低限の情報だけに絞り、画面自体をシンプルにすることに最も気をつけました。",
-    image: "/portfolio/cookpad-id-01.png",
-    imageSize: { width: 1024, height: 768 },
+    images: [{ src: "/portfolio/cookpad-id-01.png", ...size1024x768 }],
   },
   {
     id: "cookpad-pro-recipe",
@@ -189,8 +193,7 @@ export const portfolioItems: Portfolio[] = [
       "「あなたのキッチンがレシピの図書館に」\nクックパッドを数年使っていて、一般のユーザーが投稿したレシピでは満足できなくなってきたユーザーや、クックパッドのユーザー投稿レシピに興味がなかった層を取り込みたいという目的からこのコンセプトを作りました。",
     ingenuity:
       "既存のクックパッドにはない、プロのカメラマンによる料理写真が魅力的に見えるようなUIを意識し、サイトの設計を行いました。",
-    image: "/portfolio/cookpad-pro-recipe-01.png",
-    imageSize: { width: 1024, height: 768 },
+    images: [{ src: "/portfolio/cookpad-pro-recipe-01.png", ...size1024x768 }],
   },
 ];
 
