@@ -2,6 +2,9 @@ Yoko Daikoku's portfolio site by Next.js.
 
 https://yoko-daikoku-portfolio.vercel.app/
 
+## ドキュメント
+
+開発・運用の詳細は [docs/README.md](docs/README.md) を参照してください。
 
 ## Getting Started
 
