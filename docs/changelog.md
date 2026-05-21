@@ -4,6 +4,41 @@
 
 ---
 
+## プロフィールに GitHub リンク追加（`c96d507`）
+
+**概要:** 「UI/UX Designer」の下に、このリポジトリへの GitHub リンクを追加。
+
+**変更ファイル:**
+
+- `src/components/Home/ProfileSection.tsx`
+
+**挙動:**
+
+- アイコン: `react-icons/si` の `SiGithub`（画像ファイルは不要）
+- リンク先: `https://github.com/kotsuru0812/portfolio`（新規タブで開く）
+- 表示ラベル: `github.com/kotsuru0812/portfolio`（`break-all` で折り返し対応）
+- `aria-label` でスクリーンリーダー向けに説明を付与
+
+---
+
+## ドキュメント整備（`13cd0c6`）
+
+**概要:** 開発・運用向けに `docs/` フォルダを新設。
+
+**追加ファイル:**
+
+- `docs/README.md` — 目次
+- `docs/architecture.md` — プロジェクト構成
+- `docs/changelog.md` — 本ファイル
+- `docs/guides/portfolio.md` — 作品・画像の運用手順
+- `docs/guides/hobby.md` — Hobby 画像の運用手順
+
+**変更ファイル:**
+
+- `README.md` — `docs/README.md` へのリンクを追加
+
+---
+
 ## 複数画像ギャラリー（`61a040d`）
 
 **概要:** 作品データを `images[]` に拡張し、詳細ページで複数画像を表示。
