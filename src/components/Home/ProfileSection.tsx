@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SiGithub } from "react-icons/si";
 import { workExperienceByCompany } from "@/components/Home/workExperience";
 
 export default function ProfileSection() {
@@ -25,6 +26,16 @@ export default function ProfileSection() {
               <p className="mt-0.5 text-sm md:text-base font-semibold text-gray-800 dark:text-gray-200">
                 UI/UX Designer
               </p>
+              <a
+                href="https://github.com/kotsuru0812/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+                aria-label="GitHub リポジトリ（ポートフォリオサイト）"
+              >
+                <SiGithub className="h-4 w-4 shrink-0" aria-hidden />
+                <span className="break-all">github.com/kotsuru0812/portfolio</span>
+              </a>
             </div>
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-400 md:max-w-md">
